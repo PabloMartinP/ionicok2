@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Check IN / OUT
+    </ion-title>
+
+
+	<ion-buttons end>
+      <button ion-button icon-only (click)="logout()" >
+        <ion-icon name="md-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<div class="usuario" style="color:#8BC34A" text-capitalize >USUARIO: <a style="color:#333">{{usuario}}</a></div>
+  
+  
+  <div class="text-center icono-posicion" (click)="buscar_posicion()" >		
+    
+    <!--<i class="icon ion-android-checkmark-circle check" *ngIf="!buscando" ></i>-->
+    <ion-icon style="color:#8BC34A" name="checkmark-circle-outline" *ngIf="!buscando"></ion-icon>
+    <ion-spinner  icon="ripple" class="spinner-assertive icono-posicion" *ngIf="buscando">
+          
+    </ion-spinner>
+        
+	</div>
+  <div style="color:#333" text-center text-capitalize >Estado: <a style="color:#8BC34A">{{estado}}</a></div>
+  
+</ion-content>

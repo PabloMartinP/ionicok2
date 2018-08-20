@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sobre la aplicación
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <!--
+    <ion-list-header>
+      INFORMACIÓN DE LA APP
+    </ion-list-header>
+-->
+
+    
+    <ion-item  >
+      <ion-label>
+        Desarrollador
+      </ion-label>
+      <div item-content >
+        <a href="http://www.latikait.com.ar" (click)="ir_a_latika()" > Latika IT </a>
+      </div>
+    </ion-item>
+
+
+<ion-item  >
+      <ion-label>
+        Nombre
+      </ion-label>
+      <div item-content>
+        {{info.AppName}}
+      </div>
+    </ion-item>
+    
+    <!--
+    <ion-item  >
+      <ion-label>
+        Paquete
+      </ion-label>
+      <div item-content>
+        {{info.PackageName}}
+      </div>
+    </ion-item>
+    -->
+
+           
+    
+          <ion-item  >
+<ion-label>
+        Versión
+      </ion-label>
+      <div item-content>
+        {{info.VersionCode}}
+      </div>
+      </ion-item>
+
+                
+                
+                <ion-item  >
+
+      <ion-label>
+        Número de Versión
+      </ion-label>
+      <div item-content>
+        {{info.VersionNumber}}
+      </div>
+             </ion-item>
+
+
+
+  </ion-list>
+</ion-content>

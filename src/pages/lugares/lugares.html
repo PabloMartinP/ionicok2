@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Clientes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-list >
+    <!-- Button item with an icon on the left -->
+    <button ion-item (click)="mostrar_mi_posicion()" style="background-color:rgba(158, 158, 158, 0.16);">
+      <h2>Mi posición</h2>
+			<p><strong>Latitud:</strong> {{latitud}} - <strong>Longitud:</strong> {{longitud}}</p>      
+      <ion-icon name="map" item-right></ion-icon>      
+    </button>
+
+    <ion-item-divider style="background-color:#8BC34A; color:#FFF">
+		   <ion-icon name="arrow-down" style="position: relative;top: 2px;margin-right: 7px;"></ion-icon> Seleccionar Cliente 
+	</ion-item-divider>			
+
+
+    <button ion-item *ngFor="let lugar of lugares" (click)="fichar(lugar)" >
+      <h2><strong>{{lugar.Nombre}}</strong></h2>
+			<p>{{lugar.Direccion}}</p>
+      <ion-icon name="checkmark-circle-outline" item-right></ion-icon>      
+    </button>
+
+    <ion-item-divider style="font-size: 12px;color: #9E9E9E;">	 
+      * Clientes de Latika IT S.R.L.
+    </ion-item-divider>
+          
+		</ion-list>		
+			
+
+
+
+</ion-content>
+
